@@ -1,7 +1,7 @@
 :root {
   --border-color: #ff8534;
   --border-color-hover: #ff6200;
-  --input-h: 40px;
+  --input-h: 30px;
   --main-back-color: #1e1e1e;
   --main-orange: #ff6200;
   --text-color: #f5f5f5;
@@ -154,8 +154,8 @@ input[type="text"] {
   position: relative;
   z-index: 1;
   width: 100%;
-  margin: 5px 0;
-  padding: 8px 12px;
+  margin: 1px 0;
+  padding: 3px 5px;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px 0px var(--shadow-color);
 }
@@ -204,9 +204,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
-  width: 90%;
-  padding: 25px;
+  max-width: 280px;
+  width: 85%;
+  padding: 15px;
   background-color: #252525;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -215,16 +215,16 @@ body {
 
 .main-title {
   text-align: center;
-  font-size: 24px;
-  margin: 10px 0 20px 0;
-  font-weight: 600;
+  font-size: 14px;
+  margin: 8px 0 10px 0;
+  font-weight: 400;
   color: var(--main-orange);
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tip {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   color: #bebebe;
   font-size: 14px;
 }
@@ -238,8 +238,8 @@ body {
 
 .date-input-field-title {
   text-align: left;
-  margin-bottom: 8px;
-  font-weight: 500;
+  margin-bottom: 6px;
+  font-weight: 400;
   color: #bebebe;
 }
 
@@ -284,7 +284,7 @@ body {
 
 .code-container {
   width: 100%;
-  margin: 25px 0;
+  margin: 1px 0;
   text-align: center;
 }
 
@@ -300,7 +300,7 @@ body {
 }
 
 .code-container h4 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 500;
   text-align: left;
 }
@@ -311,12 +311,12 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 25px 0;
+  margin: 15px 0;
   text-align: center;
 }
 
 .output-container h4 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
@@ -333,7 +333,7 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: 2px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 0 0 10px 0px var(--shadow-color);
@@ -351,7 +351,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 10px;
+  gap: 1px;
 }
 
 .output-error {
@@ -365,7 +365,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80px;
+  width: 70px;
   height: 35px;
   margin: 0 10px;
   border: none;
@@ -404,9 +404,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 240px;
-  height: 40px;
-  margin: 20px 0;
+  width: 200px;
+  height: 30px;
+  margin: 1px 0;
   border: none;
   border-radius: 8px;
   text-align: center;
