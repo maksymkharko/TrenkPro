@@ -609,4 +609,14 @@ body {
   .save-credentials-button {
     width: 100%;
   }
+  .footer-text {
+    position: absolute; /* Закрепляем блок внизу */
+    bottom: 0; /* Отступ от низа страницы */
+    width: 100%; /* Ширина блока 100% */
+    text-align: center; /* Центрирование текста */
+    color: #333; /* Цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    background-color: #fff; /* Фоновый цвет, если нужно */
+    border-top: 1px solid #ccc; /* Легкая граница сверху, чтобы отделить от контента */
 }
