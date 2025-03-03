@@ -192,12 +192,12 @@ input[type="text"]:focus {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 2000px; /* Установлена фиксированная высота */
   background-color: var(--main-back-color);
-  overflow: auto; /* Добавлена прокрутка */
+  overflow: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .main-container {
@@ -211,6 +211,8 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   color: var(--text-color);
+  overflow: hidden;
+  position: relative;
 }
 
 .main-title {
@@ -302,7 +304,6 @@ body {
 .code-container h4 {
   margin-bottom: 10px;
   font-weight: 500;
-  text-align: left;
 }
 
 .output-container {
@@ -421,4 +422,14 @@ body {
 .save-credentials-button:hover {
   background-color: #ff7b2a;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Прокрутка с рамкой */
+.scrollable-container {
+  overflow-y: scroll;
+  height: 100%; /* Прокрутка будет работать всегда */
+  padding-right: 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 500px; /* Пустое пространство внизу */
 }
