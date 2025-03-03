@@ -192,13 +192,12 @@ input[type="text"]:focus {
 
 body {
   width: 100vw;
-  height: 100%; /* Установим высоту 100% */
+  height: 100vh;
   background-color: var(--main-back-color);
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  position: relative;
+  align-items: center;
 }
 
 .main-container {
@@ -212,8 +211,6 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   color: var(--text-color);
-  overflow: hidden;
-  position: relative;
 }
 
 .main-title {
@@ -305,6 +302,7 @@ body {
 .code-container h4 {
   margin-bottom: 10px;
   font-weight: 500;
+  text-align: left;
 }
 
 .output-container {
@@ -416,39 +414,199 @@ body {
   color: white;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .save-credentials-button:hover {
   background-color: #ff7b2a;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Прокрутка с рамкой */
-.scrollable-container {
-  overflow-y: scroll;
-  height: 100%; /* Прокрутка будет работать всегда */
-  padding-right: 15px;
+.save-popup-container {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  left: 50%;
+  top: 1000%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: #252525;
+  color: white;
   border: 2px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  display: none;
 }
 
-/* Невидимый элемент внизу страницы для Safari */
-body::after {
-  content: '';
-  display: block;
-  height: 500px; /* Добавлен пустой элемент для активации прокрутки */
+.save-popup-body {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-/* Стили для блока footer-text */
-.footer-text {
-    position: absolute; /* Закрепляем блок внизу */
-    bottom: 0; /* Отступ от низа страницы */
-    width: 60%; /* Ширина блока 100% */
-    text-align: center; /* Центрирование текста */
-    color: #ff8534; /* Цвет текста */
-    font-size: 14px; /* Размер шрифта */
-    padding: 1px 0; /* Отступы сверху и снизу */
-    background-color:  /* Фоновый цвет, если нужно */
-    border-top: 0px solid #ccc; /* Легкая граница сверху, чтобы отделить от контента */
+
+.save-popup-buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.save-popup-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-popup-discard-button {
+  background: #f44336;
+  box-shadow: 0 4px 10px rgba(244, 67, 54, 0.4);
+}
+
+.save-popup-discard-button:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(244, 67, 54, 0.5);
+}
+
+.save-popup-save-button {
+  background: var(--main-orange);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.save-popup-save-button:hover {
+  background: #ff7b2a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.show-date-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  top: 50%;
+  animation: date-popup-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hide-date-popup {
+  display: none;
+  top: 1000%;
+  animation: date-popup-out 0.4s ease-in;
+}
+
+@keyframes date-popup-in {
+  from {
+    top: 1000%;
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes date-popup-out {
+  from {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    top: 1000%;
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+}
+
+/* Improved mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  .main-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .date-input-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .date-input-container-day,
+  .date-input-container-month,
+  .date-input-container-year {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  
+  .date-input-field-title {
+    font-size: 14px;
+  }
+  
+  .code-container {
+    width: 100%;
+  }
+  
+  .output-box-and-cpy-button {
+    flex-direction: column;
+  }
+  
+  .output-box {
+    margin-bottom: 10px;
+  }
+  
+  .copy-button {
+    margin-top: 10px;
+  }
+  
+  .save-popup-container {
+    width: 90vw;
+    padding: 15px;
+  }
+  
+  .save-popup-buttons-container {
+    flex-direction: row;
+  }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 480px) {
+  .main-title {
+    font-size: 20px;
+  }
+  
+  .date-input-container {
+    flex-direction: row;
+  }
+  
+  .date-input-container-day,
+  .date-input-container-month,
+  .date-input-container-year {
+    width: 30%;
+  }
+  
+  input[type="text"] {
+    padding: 6px 8px;
+  }
+  
+  .save-credentials-button {
+    width: 100%;
+  }
 }
