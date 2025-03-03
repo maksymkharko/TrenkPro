@@ -609,30 +609,4 @@ body {
   .save-credentials-button {
     width: 100%;
   }
-/* Это для всего тела страницы */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
-
-/* Контейнер для основного контента */
-.main-container {
-    flex-grow: 1;
-}
-
-/* Стиль для текста внизу */
-.footer-text {
-    margin-top: auto;
-    text-align: center;
-    padding: 10px;
-    background-color: #f0f0f0;
-    font-size: 14px;
-    color: #333;
-}
-
-/* Дополнительное оформление для footer (например, если нужно, можно убрать рамку) */
-.footer-text p {
-    margin: 0;
-}
-
