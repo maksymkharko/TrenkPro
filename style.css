@@ -1,12 +1,12 @@
-ф:root {
+:root {
   --border-color: #555555;
-  --border-color-hover: #ff8c42; /* Оранжевый цвет для акцентов */
-  --input-h: 40px; /* Увеличим высоту инпутов для удобства на мобильных устройствах */
-  --main-back-color: #1e1e1e; /* Темный фон */
-  --main-orange: #ff8c42; /* Оранжевый цвет для кнопок и акцентов */
-  --text-color: #e0e0e0; /* Светлый текст для контраста */
-  --container-border-radius: 8px; /* Скругленные края для контейнеров */
-  --element-padding: 2px; /* Отступы внутри элементов */
+  --border-color-hover: #ff8c42;
+  --input-h: 32px; /* Уменьшаем высоту инпутов */
+  --main-back-color: #1e1e1e;
+  --main-orange: #ff8c42;
+  --text-color: #e0e0e0;
+  --container-border-radius: 8px;
+  --element-padding: 6px; /* Уменьшаем отступы */
 }
 
 body {
@@ -14,7 +14,7 @@ body {
   height: 100vh;
   background-color: var(--main-back-color);
   color: var(--text-color);
-  font-family: 'Arial', sans-serif; /* Простой шрифт для минимализма */
+  font-family: 'Arial', sans-serif;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -32,39 +32,39 @@ body {
   border: 1px solid var(--border-color);
   border-radius: var(--container-border-radius);
   width: 90%;
-  max-width: 500px;
+  max-width: 480px; /* Уменьшаем максимальную ширину */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .main-title {
   text-align: center;
-  font-size: 24px;
-  margin: 10px 0;
-  color: var(--main-orange); /* Оранжевый цвет для заголовка */
+  font-size: 20px; /* Уменьшаем размер текста */
+  margin: 6px 0; /* Уменьшаем отступы сверху и снизу */
+  color: var(--main-orange);
 }
 
 .tip {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text-color);
-  margin-bottom: 20px;
+  margin-bottom: 12px; /* Уменьшаем отступы снизу */
 }
 
 .date-input-container {
   display: flex;
-  flex-direction: row; /* Изменим направление с column на row */
+  flex-direction: row; /* Горизонтальное выравнивание */
   align-items: center;
-  justify-content: center; /* Добавлено для центрирования */
-  width: 100%; /* Увеличим ширину контейнера */
+  justify-content: center;
+  width: 100%;
   margin-top: 5px;
-  gap: 1px; /* Уменьшено расстояние между полями ввода до 5px */
+  gap: 5px; /* Уменьшаем расстояние между элементами */
 }
 
 .date-input-field-title {
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 4px; /* Уменьшаем отступы снизу */
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 14px; /* Уменьшаем размер текста */
 }
 
 .date-input-container-day input,
@@ -72,13 +72,13 @@ body {
 .date-input-container-year input {
   height: var(--input-h);
   width: 100%;
-  max-width: 320px;
+  max-width: 80px; /* Снижаем максимальную ширину */
   background-color: #333333;
   border: 1px solid var(--border-color);
   color: var(--text-color);
-  padding: 0 10px;
+  padding: 0 6px; /* Уменьшаем внутренние отступы */
   border-radius: var(--container-border-radius);
-  font-size: 16px;
+  font-size: 12px; /* Уменьшаем размер шрифта */
   box-sizing: border-box;
 }
 
@@ -91,8 +91,8 @@ body {
 
 .code-container {
   width: 100%;
-  max-width: 300px;
-  margin-top: 20px;
+  max-width: 240px; /* Уменьшаем максимальную ширину */
+  margin-top: 12px; /* Уменьшаем отступы сверху */
   text-align: center;
 }
 
@@ -102,9 +102,9 @@ body {
   background-color: #333333;
   border: 1px solid var(--border-color);
   color: var(--text-color);
-  padding: 0 10px;
+  padding: 0 6px; /* Уменьшаем внутренние отступы */
   border-radius: var(--container-border-radius);
-  font-size: 16px;
+  font-size: 12px; /* Уменьшаем размер текста */
   box-sizing: border-box;
 }
 
@@ -119,7 +119,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 1px;
+  margin-top: 6px; /* Уменьшаем отступы сверху */
   text-align: center;
 }
 
@@ -128,14 +128,14 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 300px;
+  max-width: 240px; /* Уменьшаем максимальную ширину */
   height: var(--input-h);
   background-color: #333333;
   border: 1px solid var(--border-color);
   color: var(--text-color);
   border-radius: var(--container-border-radius);
-  font-size: 16px;
-  margin-top: 1px;
+  font-size: 12px; /* Уменьшаем размер текста */
+  margin-top: 6px; /* Уменьшаем отступы сверху */
   box-sizing: border-box;
 }
 
@@ -143,14 +143,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 40px;
-  margin: 10px 0;
+  width: 80px; /* Уменьшаем ширину */
+  height: 32px; /* Уменьшаем высоту кнопок */
+  margin: 6px 0; /* Уменьшаем отступы сверху и снизу */
   background-color: var(--main-orange);
   border: none;
   border-radius: var(--container-border-radius);
   color: var(--main-back-color);
-  font-size: 16px;
+  font-size: 12px; /* Уменьшаем размер текста */
   cursor: pointer;
 }
 
@@ -159,35 +159,35 @@ body {
 }
 
 .error-field {
-  margin-top: 5px;
-  color: #ff4444; /* Красный цвет для ошибок */
+  margin-top: 4px; /* Уменьшаем отступы сверху */
+  color: #ff4444;
   height: 10px;
-  font-size: 14px;
+  font-size: 12px; /* Уменьшаем размер текста */
 }
 
 .save-credentials-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 240px;
-  height: 40px;
-  margin: 20px 0;
+  width: 200px; /* Уменьшаем ширину */
+  height: 32px; /* Уменьшаем высоту кнопок */
+  margin: 12px 0; /* Уменьшаем отступы сверху и снизу */
   background-color: var(--main-orange);
   border: none;
   border-radius: var(--container-border-radius);
   color: var(--main-back-color);
-  font-size: 16px;
+  font-size: 12px; /* Уменьшаем размер текста */
   cursor: pointer;
 }
 
 .save-credentials-button:hover {
-  background-color: #e67e22; /* Темнее оранжевый при наведении */
+  background-color: #e67e22;
 }
 
 .save-popup-container {
   position: fixed;
   width: 90%;
-  max-width: 400px;
+  max-width: 320px; /* Уменьшаем максимальную ширину */
   height: auto;
   left: 50%;
   top: 50%;
@@ -197,13 +197,13 @@ body {
   color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: var(--container-border-radius);
-  padding: 20px;
+  padding: 12px; /* Уменьшаем внутренние отступы */
   display: none;
   box-sizing: border-box;
 }
 
 .save-popup-body {
-  margin: 0 10px;
+  margin: 0 8px; /* Уменьшаем отступы слева и справа */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -213,25 +213,25 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 12px; /* Уменьшаем отступы сверху */
 }
 
 .save-popup-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 40px;
+  width: 80px; /* Уменьшаем ширину */
+  height: 32px; /* Уменьшаем высоту кнопок */
   background-color: var(--main-orange);
   border: none;
   border-radius: var(--container-border-radius);
   color: var(--main-back-color);
-  font-size: 16px;
+  font-size: 12px; /* Уменьшаем размер текста */
   cursor: pointer;
 }
 
 .save-popup-button:hover {
-  background-color: #e67e22; /* Темнее оранжевый при наведении */
+  background-color: #e67e22;
 }
 
 .show-date-popup {
@@ -272,26 +272,4 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .main-container {
-    padding: 10px;
-  }
-
-  .date-input-container {
-    margin-top: 10px;
-  }
-
-  .date-input-container-day,
-  .date-input-container-month,
-  .date-input-container-year {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .code-container {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .output-box {
-    width
+@media only screen and (max-width: 
