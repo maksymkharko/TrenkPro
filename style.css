@@ -1,7 +1,7 @@
 :root {
   --border-color: #ff8534;
   --border-color-hover: #ff6200;
-  --input-h: 30px;
+  --input-h: 35px;
   --main-back-color: #1e1e1e;
   --main-orange: #ff6200;
   --text-color: #f5f5f5;
@@ -204,7 +204,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 280px;
+  max-width: 550px;
   width: 85%;
   padding: 15px;
   background-color: #252525;
