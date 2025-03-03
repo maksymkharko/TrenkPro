@@ -192,12 +192,13 @@ input[type="text"]:focus {
 
 body {
   width: 100vw;
-  height: 2000px; /* Установлена фиксированная высота */
+  height: 100%; /* Установим высоту 100% */
   background-color: var(--main-back-color);
   overflow: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
 
 .main-container {
@@ -431,5 +432,23 @@ body {
   padding-right: 15px;
   border: 2px solid var(--border-color);
   border-radius: 8px;
-  margin-bottom: 500px; /* Пустое пространство внизу */
+}
+
+/* Невидимый элемент внизу страницы для Safari */
+body::after {
+  content: '';
+  display: block;
+  height: 500px; /* Добавлен пустой элемент для активации прокрутки */
+}
+/* Стили для блока footer-text */
+.footer-text {
+    position: absolute; /* Закрепляем блок внизу */
+    bottom: 0; /* Отступ от низа страницы */
+    width: 60%; /* Ширина блока 100% */
+    text-align: center; /* Центрирование текста */
+    color: #ff8534; /* Цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    padding: -1000px 0; /* Отступы сверху и снизу */
+    background-color:  /* Фоновый цвет, если нужно */
+    border-top: 0px solid #ccc; /* Легкая граница сверху, чтобы отделить от контента */
 }
