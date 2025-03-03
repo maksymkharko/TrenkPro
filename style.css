@@ -1,4 +1,4 @@
-:root {
+ф:root {
   --border-color: #555555;
   --border-color-hover: #ff8c42; /* Оранжевый цвет для акцентов */
   --input-h: 40px; /* Увеличим высоту инпутов для удобства на мобильных устройствах */
@@ -6,7 +6,7 @@
   --main-orange: #ff8c42; /* Оранжевый цвет для кнопок и акцентов */
   --text-color: #e0e0e0; /* Светлый текст для контраста */
   --container-border-radius: 8px; /* Скругленные края для контейнеров */
-  --element-padding: 10px; /* Отступы внутри элементов */
+  --element-padding: 2px; /* Отступы внутри элементов */
 }
 
 body {
@@ -52,9 +52,10 @@ body {
 
 .date-input-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Изменим направление с column на row */
   align-items: center;
-  width: 50%;
+  justify-content: center; /* Добавлено для центрирования */
+  width: 100%; /* Увеличим ширину контейнера */
   margin-top: 5px;
   gap: 1px; /* Уменьшено расстояние между полями ввода до 5px */
 }
@@ -293,11 +294,4 @@ body {
   }
 
   .output-box {
-    width: 100%;
-  }
-
-  .save-popup-container {
-    width: 90%;
-    padding: 15px;
-  }
-}
+    width
