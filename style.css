@@ -5,6 +5,8 @@
   --main-back-color: #1e1e1e; /* Темный фон */
   --main-orange: #ff8c42; /* Оранжевый цвет для кнопок и акцентов */
   --text-color: #e0e0e0; /* Светлый текст для контраста */
+  --container-border-radius: 8px; /* Скругленные края для контейнеров */
+  --element-padding: 10px; /* Отступы внутри элементов */
 }
 
 body {
@@ -16,14 +18,22 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  overflow: hidden;
+  padding: var(--element-padding);
+  background-color: #2c2c2c;
+  border: 1px solid var(--border-color);
+  border-radius: var(--container-border-radius);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .main-title {
@@ -44,9 +54,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  margin-top: 10px;
-  gap: 10px; /* Расстояние между полями ввода */
+  width: 50%;
+  margin-top: 5px;
+  gap: 1px; /* Уменьшено расстояние между полями ввода до 5px */
 }
 
 .date-input-field-title {
@@ -61,12 +71,12 @@ body {
 .date-input-container-year input {
   height: var(--input-h);
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   background-color: #333333;
   border: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 0 10px;
-  border-radius: 5px;
+  border-radius: var(--container-border-radius);
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -92,7 +102,7 @@ body {
   border: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 0 10px;
-  border-radius: 5px;
+  border-radius: var(--container-border-radius);
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -108,7 +118,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 1px;
   text-align: center;
 }
 
@@ -122,9 +132,9 @@ body {
   background-color: #333333;
   border: 1px solid var(--border-color);
   color: var(--text-color);
-  border-radius: 5px;
+  border-radius: var(--container-border-radius);
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 1px;
   box-sizing: border-box;
 }
 
@@ -137,7 +147,7 @@ body {
   margin: 10px 0;
   background-color: var(--main-orange);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--container-border-radius);
   color: var(--main-back-color);
   font-size: 16px;
   cursor: pointer;
@@ -163,7 +173,7 @@ body {
   margin: 20px 0;
   background-color: var(--main-orange);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--container-border-radius);
   color: var(--main-back-color);
   font-size: 16px;
   cursor: pointer;
@@ -185,7 +195,7 @@ body {
   background: #2c2c2c;
   color: var(--text-color);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--container-border-radius);
   padding: 20px;
   display: none;
   box-sizing: border-box;
@@ -213,7 +223,7 @@ body {
   height: 40px;
   background-color: var(--main-orange);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--container-border-radius);
   color: var(--main-back-color);
   font-size: 16px;
   cursor: pointer;
@@ -228,7 +238,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: var(--container-border-radius);
   top: 50%;
   animation: date-popup-in 0.3s ease-in-out;
 }
